@@ -7,38 +7,3 @@ datasources:
     isDefault: true
     access: proxy
     editable: true
-
-  - name: minecraft_survival
-    type: prometheus
-    url: http://host.docker.internal:9061
-    isDefault: true
-    access: proxy
-    editable: true
-
-  - name: minecraft_mirror
-    type: prometheus
-    url: http://host.docker.internal:9062
-    isDefault: true
-    access: proxy
-    editable: true
-
-  - name: minecraft_mirror2
-    type: prometheus
-    url: http://host.docker.internal:9063
-    isDefault: true
-    access: proxy
-    editable: true
-
-  - name: minecraft_creative
-    type: prometheus
-    url: http://host.docker.internal:9064
-    isDefault: true
-    access: proxy
-    editable: true
-
-  - name: minecraft_creative2
-    type: prometheus
-    url: http://host.docker.internal:9067
-    isDefault: true
-    access: proxy
-    editable: true
