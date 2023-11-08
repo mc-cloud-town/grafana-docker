@@ -22,6 +22,8 @@ services:
       options:
         max-size: 10m
     networks: [background]
+    extra_hosts:
+      - host.docker.internal:host-gateway
     depends_on:
       - node_exporter
 
@@ -36,6 +38,8 @@ services:
       # GF_RENDERING_SERVER_URL: http://renderer:8081/render
       GF_RENDERING_CALLBACK_URL: http://grafana:3000/
     networks: [background]
+    extra_hosts:
+      - host.docker.internal:host-gateway
     depends_on:
       - prometheus
       # - grafana_renderer
