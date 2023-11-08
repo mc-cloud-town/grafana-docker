@@ -30,22 +30,22 @@ scrape_configs:
     static_configs:
       - targets: [node_exporter:9100]
 
-  - job_name: minecraft_survival
-    static_configs:
-      - targets: [host.docker.internal:9061]
+  # - job_name: minecraft_survival
+  #   static_configs:
+  #     - targets: [host.docker.internal:9061]
 
   - job_name: minecraft_mirror
     static_configs:
       - targets: [host.docker.internal:9062]
 
-  - job_name: minecraft_mirror2
-    static_configs:
-      - targets: [host.docker.internal:9063]
+  # - job_name: minecraft_mirror2
+  #   static_configs:
+  #     - targets: [host.docker.internal:9063]
 
-  - job_name: minecraft_creative
-    static_configs:
-      - targets: [host.docker.internal:9064]
+  # - job_name: minecraft_creative
+  #   static_configs:
+  #     - targets: [host.docker.internal:9064]
 
-  - job_name: minecraft_creative2
-    static_configs:
-      - targets: [host.docker.internal:9067]
+  # - job_name: minecraft_creative2
+  #   static_configs:
+  #     - targets: [host.docker.internal:9067]
