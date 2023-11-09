@@ -61,6 +61,14 @@
   "liveNow": false,
   "panels": [
     {
+      "collapsed": false,
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 0 },
+      "id": 21,
+      "panels": [],
+      "title": "Minecraft Server",
+      "type": "row"
+    },
+    {
       "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
       "fieldConfig": {
         "defaults": {
@@ -104,7 +112,7 @@
           }
         ]
       },
-      "gridPos": { "h": 7, "w": 8, "x": 0, "y": 0 },
+      "gridPos": { "h": 7, "w": 8, "x": 0, "y": 1 },
       "id": 19,
       "options": {
         "legend": {
@@ -174,7 +182,7 @@
           }
         ]
       },
-      "gridPos": { "h": 7, "w": 8, "x": 8, "y": 0 },
+      "gridPos": { "h": 7, "w": 8, "x": 8, "y": 1 },
       "id": 20,
       "options": {
         "legend": {
@@ -261,7 +269,7 @@
           }
         ]
       },
-      "gridPos": { "h": 7, "w": 8, "x": 16, "y": 0 },
+      "gridPos": { "h": 7, "w": 8, "x": 16, "y": 1 },
       "id": 18,
       "options": {
         "legend": {
@@ -288,7 +296,7 @@
     },
     {
       "collapsed": false,
-      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 7 },
+      "gridPos": { "h": 1, "w": 24, "x": 0, "y": 8 },
       "id": 17,
       "panels": [],
       "title": "Base Server",
@@ -348,7 +356,7 @@
           }
         ]
       },
-      "gridPos": { "h": 7, "w": 7, "x": 0, "y": 8 },
+      "gridPos": { "h": 7, "w": 7, "x": 0, "y": 9 },
       "id": 6,
       "options": {
         "legend": {
@@ -403,7 +411,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 4, "w": 2, "x": 7, "y": 8 },
+      "gridPos": { "h": 4, "w": 2, "x": 7, "y": 9 },
       "id": 13,
       "options": {
         "colorMode": "value",
@@ -445,7 +453,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 4, "w": 3, "x": 9, "y": 8 },
+      "gridPos": { "h": 4, "w": 3, "x": 9, "y": 9 },
       "id": 8,
       "options": {
         "colorMode": "value",
@@ -487,7 +495,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 4, "w": 3, "x": 12, "y": 8 },
+      "gridPos": { "h": 4, "w": 3, "x": 12, "y": 9 },
       "id": 9,
       "options": {
         "colorMode": "value",
@@ -536,7 +544,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 4, "w": 2, "x": 15, "y": 8 },
+      "gridPos": { "h": 4, "w": 2, "x": 15, "y": 9 },
       "id": 14,
       "options": {
         "colorMode": "value",
@@ -614,7 +622,7 @@
           }
         ]
       },
-      "gridPos": { "h": 7, "w": 7, "x": 17, "y": 8 },
+      "gridPos": { "h": 7, "w": 7, "x": 17, "y": 9 },
       "id": 7,
       "options": {
         "minVizHeight": 75,
@@ -657,7 +665,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 3, "w": 2, "x": 7, "y": 12 },
+      "gridPos": { "h": 3, "w": 2, "x": 7, "y": 13 },
       "id": 12,
       "options": {
         "colorMode": "value",
@@ -700,7 +708,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 3, "w": 2, "x": 9, "y": 12 },
+      "gridPos": { "h": 3, "w": 2, "x": 9, "y": 13 },
       "id": 15,
       "options": {
         "colorMode": "value",
@@ -743,7 +751,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 3, "w": 2, "x": 11, "y": 12 },
+      "gridPos": { "h": 3, "w": 2, "x": 11, "y": 13 },
       "id": 10,
       "options": {
         "colorMode": "value",
@@ -786,7 +794,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 3, "w": 2, "x": 13, "y": 12 },
+      "gridPos": { "h": 3, "w": 2, "x": 13, "y": 13 },
       "id": 16,
       "options": {
         "colorMode": "value",
@@ -829,7 +837,7 @@
         },
         "overrides": []
       },
-      "gridPos": { "h": 3, "w": 2, "x": 15, "y": 12 },
+      "gridPos": { "h": 3, "w": 2, "x": 15, "y": 13 },
       "id": 11,
       "options": {
         "colorMode": "value",
@@ -882,6 +890,6 @@
   "timezone": "",
   "title": "CTEC",
   "uid": "efec6a0f-4fe1-43e9-93b2-e24e6b84546e",
-  "version": 13,
+  "version": 14,
   "weekStart": ""
 }
