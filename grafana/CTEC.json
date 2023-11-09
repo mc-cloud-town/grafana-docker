@@ -335,14 +335,14 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "sum(rate(node_disk_read_bytes_total{job=\"node_exporter\"}[30s]))"
+              "options": "sum(rate(node_disk_read_bytes_total{job=\"node_exporter\"}[15s]))"
             },
             "properties": [{ "id": "displayName", "value": "Read" }]
           },
           {
             "matcher": {
               "id": "byName",
-              "options": "sum(rate(node_disk_written_bytes_total[30s]))"
+              "options": "sum(rate(node_disk_written_bytes_total[15s]))"
             },
             "properties": [{ "id": "displayName", "value": "Wire" }]
           }
@@ -367,7 +367,7 @@
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
-          "refId": "A"
+          "refId": "Read"
         },
         {
           "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
@@ -377,7 +377,7 @@
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
-          "refId": "B"
+          "refId": "Wire"
         }
       ],
       "title": "Disk R/W Data",
@@ -882,6 +882,6 @@
   "timezone": "",
   "title": "CTEC",
   "uid": "efec6a0f-4fe1-43e9-93b2-e24e6b84546e",
-  "version": 10,
+  "version": 13,
   "weekStart": ""
 }
