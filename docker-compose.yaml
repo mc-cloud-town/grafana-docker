@@ -54,6 +54,7 @@ services:
     restart: unless-stopped
     environment:
       BROWSER_TZ: Asia/Taipei
+    networks: [background]
     ports: [8081:8081]
 
 volumes:
