@@ -121,7 +121,7 @@
           "placement": "bottom",
           "showLegend": true
         },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "tooltip": { "mode": "multi", "sort": "none" }
       },
       "targets": [
         {
@@ -191,7 +191,7 @@
           "placement": "bottom",
           "showLegend": true
         },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "tooltip": { "mode": "multi", "sort": "none" }
       },
       "targets": [
         {
@@ -278,7 +278,7 @@
           "placement": "bottom",
           "showLegend": true
         },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "tooltip": { "mode": "multi", "sort": "none" }
       },
       "targets": [
         {
@@ -890,6 +890,6 @@
   "timezone": "",
   "title": "CTEC",
   "uid": "efec6a0f-4fe1-43e9-93b2-e24e6b84546e",
-  "version": 14,
+  "version": 15,
   "weekStart": ""
 }

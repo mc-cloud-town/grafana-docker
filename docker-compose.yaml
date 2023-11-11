@@ -35,8 +35,12 @@ services:
       - grafana-storage:/var/lib/grafana
     ports: [3300:3000]
     environment:
+      GF_AUTO_ANONYMOUS_ENABLED: true
+      GF_AUTO_ANONYMOUS_ORG_NAME: CTEC
+      GF_AUTO_ANONYMOUS_ORG_ROLE: VIEWER
+      GF_AUTO_ANONYMOUS_HIDE_VERSION: true
       GF_USERS_DEFAULT_LANGUAGE: detect
-      # GF_RENDERING_SERVER_URL: http://renderer:8081/render
+      GF_RENDERING_SERVER_URL: http://renderer:8081/render
       GF_RENDERING_CALLBACK_URL: http://grafana:3000/
     networks: [background]
     extra_hosts:
@@ -45,12 +49,12 @@ services:
       - prometheus
       # - grafana_renderer
 
-  # grafana_renderer:
-  #   image: grafana/grafana-image-renderer
-  #   restart: unless-stopped
-  #   environment:
-  #     BROWSER_TZ: Asia/Taipei
-  #   ports: [8081:8081]
+  grafana_renderer:
+    image: grafana/grafana-image-renderer
+    restart: unless-stopped
+    environment:
+      BROWSER_TZ: Asia/Taipei
+    ports: [8081:8081]
 
 volumes:
   prometheus-volume: {}
