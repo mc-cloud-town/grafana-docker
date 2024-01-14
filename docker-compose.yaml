@@ -52,9 +52,10 @@ services:
   netdata:
     image: netdata/netdata
     pid: host
-    network_mode: host
+    # network_mode: host
     restart: unless-stopped
     expose: [19999]
+    networks: [background]
     cap_add:
       - SYS_PTRACE
       - SYS_ADMIN
