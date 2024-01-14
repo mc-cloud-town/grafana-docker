@@ -25,6 +25,7 @@ services:
     extra_hosts:
       - host.docker.internal:host-gateway
     depends_on:
+      - netdata
       - node_exporter
 
   grafana:
