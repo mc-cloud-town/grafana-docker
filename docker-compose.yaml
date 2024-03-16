@@ -1,14 +1,14 @@
 services:
-  node_exporter:
-    image: quay.io/prometheus/node-exporter:latest
-    restart: unless-stopped
-    command:
-      - --path.rootfs=/host
-    pid: host
-    expose: [9100]
-    networks: [background]
-    volumes:
-      - /:/host:ro,rslave
+  # node_exporter:
+  #   image: quay.io/prometheus/node-exporter:latest
+  #   restart: unless-stopped
+  #   command:
+  #     - --path.rootfs=/host
+  #   pid: host
+  #   expose: [9100]
+  #   networks: [background]
+  #   volumes:
+  #     - /:/host:ro,rslave
 
   prometheus:
     image: prom/prometheus
@@ -24,9 +24,9 @@ services:
     networks: [background]
     extra_hosts:
       - host.docker.internal:host-gateway
-    depends_on:
-      - netdata
-      - node_exporter
+    # depends_on:
+    #   - netdata
+    #   - node_exporter
 
   grafana:
     image: grafana/grafana
@@ -49,35 +49,35 @@ services:
     depends_on:
       - prometheus
 
-  netdata:
-    image: netdata/netdata
-    pid: host
-    # network_mode: host
-    restart: unless-stopped
-    expose: [19999]
-    networks: [background]
-    cap_add:
-      - SYS_PTRACE
-      - SYS_ADMIN
-    security_opt:
-      - apparmor:unconfined
-    volumes:
-      - netdataconfig:/etc/netdata
-      - netdatalib:/var/lib/netdata
-      - netdatacache:/var/cache/netdata
-      - /etc/passwd:/host/etc/passwd:ro
-      - /etc/group:/host/etc/group:ro
-      - /etc/localtime:/etc/localtime:ro
-      - /proc:/host/proc:ro
-      - /sys:/host/sys:ro
-      - /etc/os-release:/host/etc/os-release:ro
-      - /var/log:/host/var/log:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
+  # netdata:
+  #   image: netdata/netdata
+  #   pid: host
+  #   # network_mode: host
+  #   restart: unless-stopped
+  #   expose: [19999]
+  #   networks: [background]
+  #   cap_add:
+  #     - SYS_PTRACE
+  #     - SYS_ADMIN
+  #   security_opt:
+  #     - apparmor:unconfined
+  #   volumes:
+  #     - netdataconfig:/etc/netdata
+  #     - netdatalib:/var/lib/netdata
+  #     - netdatacache:/var/cache/netdata
+  #     - /etc/passwd:/host/etc/passwd:ro
+  #     - /etc/group:/host/etc/group:ro
+  #     - /etc/localtime:/etc/localtime:ro
+  #     - /proc:/host/proc:ro
+  #     - /sys:/host/sys:ro
+  #     - /etc/os-release:/host/etc/os-release:ro
+  #     - /var/log:/host/var/log:ro
+  #     - /var/run/docker.sock:/var/run/docker.sock:ro
 
 volumes:
-  netdataconfig:
-  netdatalib:
-  netdatacache:
+  # netdataconfig:
+  # netdatalib:
+  # netdatacache:
 
   prometheus-volume:
   grafana-storage:

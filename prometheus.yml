@@ -26,39 +26,39 @@ scrape_configs:
     static_configs:
       - targets: [localhost:9090]
 
-  - job_name: netdata-scrape
-    metrics_path: /api/v1/allmetrics
-    honor_labels: true
-    params:
-      format: [prometheus]
-    static_configs:
-      - targets: [netdata:19999]
+  # - job_name: netdata-scrape
+  #   metrics_path: /api/v1/allmetrics
+  #   honor_labels: true
+  #   params:
+  #     format: [prometheus]
+  #   static_configs:
+  #     - targets: [netdata:19999]
 
-  - job_name: node_exporter
-    static_configs:
-      - targets: [node_exporter:9100]
+  # - job_name: node_exporter
+  #   static_configs:
+  #     - targets: [node_exporter:9100]
 
-  - job_name: haproxy
-    metrics_path: /metrics
-    static_configs:
-      - targets: [host.docker.internal:8405]
+  # - job_name: haproxy
+  #   metrics_path: /metrics
+  #   static_configs:
+  #     - targets: [host.docker.internal:8405]
 
-  - job_name: Survival
-    static_configs:
-      - targets: [host.docker.internal:9061]
+  # - job_name: Survival
+  #   static_configs:
+  #     - targets: [host.docker.internal:9061]
 
-  - job_name: Mirror
-    static_configs:
-      - targets: [host.docker.internal:9062]
+  # - job_name: Mirror
+  #   static_configs:
+  #     - targets: [host.docker.internal:9062]
 
-  - job_name: Mirror2
-    static_configs:
-      - targets: [host.docker.internal:9063]
+  # - job_name: Mirror2
+  #   static_configs:
+  #     - targets: [host.docker.internal:9063]
 
-  - job_name: Creative
-    static_configs:
-      - targets: [host.docker.internal:9064]
+  # - job_name: Creative
+  #   static_configs:
+  #     - targets: [host.docker.internal:9064]
 
-  - job_name: Creative2
-    static_configs:
-      - targets: [host.docker.internal:9067]
+  # - job_name: Creative2
+  #   static_configs:
+  #     - targets: [host.docker.internal:9067]
